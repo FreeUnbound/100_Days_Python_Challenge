@@ -7,24 +7,24 @@ input("Press e to continue...")
 print("\n" * 100)
 
 name = input("Enter your Name: ")
-bid = float(input("Enter your Bidding Price: "))
+bid = float(input("Enter your Bidding Price: $"))
 
 house = {
     "Name": [name],
     "Bid": [bid]
 
 }
-new = input("Are there any other Users who wants to bid? (Yes/No): )")
+new = input("Are there any other Users who wants to bid? (Yes/No): )").lower()
 print("\n" * 100)
 
-while not new == "No":
+while not new == "no":
     name = input("Enter your Name: ")
-    bid = float(input("Enter your Bidding Price: "))
+    bid = float(input("Enter your Bidding Price: $"))
 
     house["Name"].append(name)
     house["Bid"].append(bid)
 
-    new = input("Are there any other Users who wants to bid? (Yes/No): ")
+    new = input("Are there any other Users who wants to bid? (Yes/No): ").lower()
     print("\n" * 100)
 
 print("\n" * 100)
@@ -36,7 +36,7 @@ for m_bid in house["Bid"]:
 
 print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
 print("Congratulations to the highest bidder!!")
-print(f"Highest bidder is {house["Name"][house["Bid"].index(highest_bid)]} with bid of {highest_bid} !!")
+print(f"Highest bidder is {house["Name"][house["Bid"].index(highest_bid)]} with bid of ${highest_bid} !!")
 print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
 
 print("\n" * 4)
